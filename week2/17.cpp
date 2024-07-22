@@ -1,25 +1,36 @@
 #include<iostream>
 using namespace std;
 
-int sum(int a, int b); //i have only declared the function but body isn't defined, which is known as prototype
+void PrintHi()      //No parameters are required
+{
+    cout<<"Hi"<<endl;
+    return;
+}
+int sum(int a, int b)
+{
+    int c;    //c declared in sum function
+    c = a+b;
+    a=500;
+    cout<<"The value of c is "<<c<<endl;
+    return c;
+}
+int main()
+{
+    PrintHi();
 
-int main(){
-	int a,b;
-	
-	a=3;
-	b=5;
-	
-	int c;
-	cout<<a<<" "<<b<<endl;  //before i call the function
-	c = sum(3,3);   //function call with parameters 3 & 3
-	
-	cout<<c<<endl;
-	cout<<a<<" "<<b<<endl;   //after i call the funcion
-	return 0;
+    int a,b;
+    int c;    //c declared in main function
+
+    a=4;
+    b=6;
+
+    c=75;
+
+    int d;
+    d = sum(a,b);
+    //cout<<"The sum is equal to "<<d<<" "<<"The value of a is "<<a<<endl;       //The value of a should turn out to be 500
+    cout<<"The value of c is "<<c<<endl;
+    return 0;
 }
 
-int sum(int a, int b){   //function definition
-	a=10;
-	b=11;
-	return a+b;  //10+11
-}
+//Al
